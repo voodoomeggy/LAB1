@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти — Бенедикт Камбербетч</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stile.css">
+</head>
+
+<body>
+    <header>
+        <h1>Контакти</h1>
+        <nav>
+            <ul>
+                <li><a href="lab1.html">Головна</a></li>
+                <li><a href="contact.html" class="active">Контакти</a></li>
+                <li><a href="https://uk.wikipedia.org/wiki/Бенедикт_Камбербетч" target="_blank">Джерело</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Блок з біографією та картинками -->
+        <section class="bio-section">
+            <!-- Біографія з картинками -->
+            <div class="bio-content">
+                <img src="images/sherloc.jpg" alt="Камбербетч молодий" class="float-left">
+
+                <p>
+                    Бенедикт Камбербетч народився <strong>19 липня 1976 року</strong> в Лондоні у родині акторів — <em>Ванди Вентем</em> і <em>Тімоті Карлтона</em>.
+                    Навчався у престижній школі Гарроу, де вперше почав виступати на сцені.
+                    Після цього продовжив навчання у Манчестерському університеті та Лондонській академії музики і драматичного мистецтва.
+                </p>
+
+                <img src="images/alan.jpg" alt="Рання роль" class="float-right">
+
+                <p>
+                    Його театральна кар'єра почалася в Національному театрі, де він грав у класичних постановках.
+                    Широку популярність йому принесла роль Шерлока Холмса у серіалі «Sherlock» (2010–2017),
+                    що зробила його одним з найвідоміших британських акторів сучасності.
+                </p>
+
+                <p class="clear-both">
+                    Камбербетч також зіграв у багатьох кінофільмах, серед яких «Гра в імітацію» (2014),
+                    де він втілив Алана Тюрінга, та «Доктор Стрендж» у кіновсесвіті Marvel.
+                </p>
+
+                <img src="images/doctor.png" alt="Доктор Стрендж" class="no-float">
+            </div>
+
+            <!-- Демонстрація абсолютного позиціонування -->
+            <div class="absolute-positioning-demo">
+                <div class="stacked-images">
+                    <img src="images/sherloc.jpg" alt="Шерлок" class="stacked-img img-1">
+                    <img src="images/doctor.png" alt="Доктор Стрендж" class="stacked-img img-2">
+                    <img src="images/alan.jpg" alt="Алан Тюрінг" class="stacked-img img-3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Меню перемикання форм -->
+        <input type="radio" name="form-tab" id="tab-register" checked hidden>
+        <input type="radio" name="form-tab" id="tab-login" hidden>
+        <input type="radio" name="form-tab" id="tab-feedback" hidden>
+
+        <div class="form-tabs">
+            <label for="tab-register" class="tab-button">Форма реєстрації</label>
+            <label for="tab-login" class="tab-button">Форма входу</label>
+            <label for="tab-feedback" class="tab-button">Форма зворотного зв'язку</label>
+        </div>
+
+        <!--  Форма реєстрації -->
+        <section class="form-section" id="register">
+            <div class="form-header">
+                <div class="user-icon">👤</div>
+                <h3>Форма реєстрації</h3>
+            </div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">Ім'я</label>
+                        <input type="text" id="fname" name="fname" placeholder="Ім'я" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Прізвище</label>
+                        <input type="text" id="lname" name="lname" placeholder="Прізвище" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Стать</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male"> Чоловіча
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Жіноча
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="21">
+                </div>
+
+                <div class="form-group">
+                    <label for="bdate">Дата народження</label>
+                    <input type="date" id="bdate" name="bdate">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Країна проживання</label>
+                    <select id="country" name="country" required>
+                        <option value="">Оберіть країну проживання</option>
+                        <option>Україна</option>
+                        <option>Велика Британія</option>
+                        <option>США</option>
+                        <option>Канада</option>
+                        <option>Німеччина</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+38(0XX)XXX-XX-XX" pattern="[+]?[0-9]{10,13}">
+                </div>
+
+                <div class="form-group floating-label-group">
+                    <label for="social">Посилання на соц.мережу</label>
+                    <input type="url" id="social" name="social" placeholder="Посилання на соц.мережу">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта</label>
+                    <input type="email" id="email" name="email" placeholder="Ел. пошта" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Пароль" required minlength="6">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required> Чи згідні Ви з умовами?
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Зареєструватися</button>
+                    <button type="reset" class="btn-reset">Відмінити</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Форма входу -->
+        <section class="form-section" id="login">
+            <div class="form-header">
+                <h3>Форма входу</h3>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Логін</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="Логін" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-pass">Пароль</label>
+                    <input type="password" id="login-pass" name="login-pass" placeholder="Пароль" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Вхід</button>
+                </div>
+            </form>
+        </section>
+
+        <!--  Форма зворотного зв'язку -->
+        <section class="form-section" id="feedback">
+            <div class="form-header">
+                <h3>Форма зворотного зв'язку</h3>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="fb-name">Ім'я</label>
+                    <input type="text" id="fb-name" name="fb-name" placeholder="Ім'я" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-email">Ел. пошта</label>
+                    <input type="email" id="fb-email" name="fb-email" placeholder="Ел. пошта" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Тема повідомлення</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Оберіть тему</option>
+                        <option>Загальне питання</option>
+                        <option>Технічна підтримка</option>
+                        <option>Співпраця</option>
+                        <option>Інше</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Введіть ваше повідомлення..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Відправити</button>
+                    <button type="reset" class="btn-reset">Очистити</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Посилання на соц.мережі -->
+        <div class="social-links">
+            <h3>Посилання на соц.мережі</h3>
+            <div class="social-circles">
+                <a href="#" class="social-circle" title="Facebook">f</a>
+                <a href="#" class="social-circle" title="Twitter">𝕏</a>
+                <a href="#" class="social-circle" title="Instagram">📷</a>
+                <a href="#" class="social-circle" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>Copyright © 2025 | mob. 0978534631 | email: voodoomeggy@gmail.com</small></p>
+    </footer>
+</body>
+</html>
